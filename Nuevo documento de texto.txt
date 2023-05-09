@@ -1,0 +1,14 @@
+clonar repositorio en una carpeta git clone url reposirorio
+abrir vs code
+
+>dev containers add dev container configuration files
+	show all definitions-> node.js & mongo db node version 20 ok
+
+>dev containers reopen in container
+>dev rebuild containers	
+
+terminal node --version
+	mongosh
+		show dbs
+		exit()
+sincronizar cpn git en vscode. cambiar nombre y correo de github
