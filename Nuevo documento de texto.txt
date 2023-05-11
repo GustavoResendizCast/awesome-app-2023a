@@ -12,3 +12,6 @@ terminal node --version
 		show dbs
 		exit()
 sincronizar cpn git en vscode. cambiar nombre y correo de github
+
+>comandos express npm i express
+mensaje de arranque en el servidor console.log("📣 Sirviendo en htpp//:localhost:3000");
