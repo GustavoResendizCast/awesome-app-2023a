@@ -3,7 +3,6 @@ import http from 'http';
 
 // Importar express
 import express from 'express';
-import { use } from 'express/lib/application';
 
 // Crear una instancia de express
 const app = express(); // (req,res)=> {Un monto de codigo}
