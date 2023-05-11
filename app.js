@@ -14,9 +14,8 @@ app.use((req, res, next)=>{
     // Invocando al siguiente Middleware
     next();
 });
-
 app.use((req, res, next)=>{
-    console.log("⭐ Ejecutando el Middleware 2");
+    console.log(`${req.method} - ${req.url}`);
     next();
 });
 
