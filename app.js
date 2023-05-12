@@ -21,20 +21,20 @@ app.use((req, res, next)=>{
 app.use((req,res)=>{
     console.log("⭐ Respondiendo al cliente");
     res.send(`
-    <h1>Welcome to express</h1>
+    <h1>Bienvenido a express</h1>
     <p>This is my awesome app</p>
     `);
 });
 
 // Creando el servidor
-const server = http.createServer(app);
+//const server = http.createServer(app);
 
 // Definir puertos
 const port = 3000;
 const ip = "0.0.0.0";
 
 // Arrancar el server
-server.listen(port,ip, (err)=>{
+app.listen(port,ip, (err)=>{
     console.log("📣 Sirviendo en htpp//:localhost:3000");
-    console.log(`📣 Sirviendo en htpp//:${process.env.ip}:3000`);
+    console.log(`📣 Sirviendo en htpp//:${process.env.ip}:${process.env.PORT}`);
 });
