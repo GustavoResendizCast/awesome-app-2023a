@@ -1,5 +1,7 @@
 // Importando Express
 import express from 'express';
+// Importando http-status
+import httpStatus from 'http-status'
 
 // Importando el enrutador
 import adminRouter from './routes/admin.route.js';
@@ -13,9 +15,11 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 // Se agrega ruta de administrador
-app.use(adminRouter);
+app.use('/admin',adminRouter);
 // Se agrega ruta shop
 app.use(shopRouter);
+// Registramdo middleware para
+// el error 404
 
 
 // Definiendo puertos
