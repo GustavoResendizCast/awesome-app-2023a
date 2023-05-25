@@ -23,7 +23,6 @@ router.get('/about', (req, res) => {
 });
 
 router.use((req, res)=>{
-  console.log("error 404")
   res.sendFile(path.resolve('views','notfound.html'));
 });
 export default router;
