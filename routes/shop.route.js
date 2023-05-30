@@ -7,7 +7,8 @@ import path from 'path';
 const router = Router();
 
 // Importando productos
-import { products } from './admin.route.js';
+import { products } from './admin.routes.js';
+import httpsStatus from 'http-status'
 
 // GET /
 router.get('/', (req, res)=>{
