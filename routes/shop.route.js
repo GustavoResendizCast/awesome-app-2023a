@@ -2,6 +2,8 @@
 import { Router } from 'express';
 // Importando el gestor de rutas
 import path from 'path';
+// Importando el arreglo de productos
+import { products } from './admin.route.js';
 
 // Creando una instancia del enrutador de express
 const router = Router();
@@ -15,7 +17,12 @@ router.get('/', (req, res)=>{
   // Mostrando productos en memoria
   console.log(products);
   console.log("📢 Sirviendo la ruta '/'");
-  res.render('shop', {shop: 'active', docTitle:"Shop"});
+  res.render('shop', { 
+    shop: 'active', 
+    docTitle:"Shop",
+    viewStyle: '/css/product.css',
+    products
+  });
 });
 
 // GET /about
@@ -26,6 +33,13 @@ router.get('/about', (req, res) => {
     <h1>🪄 About...</h1>
     <p>App for Fullstack Web Dev Course I!</p>
   `);
+});
+
+// La ruta raíz entra en todo tipo de petición
+router.get(["/", "/home"], (_, res) => {
+  console.log(`📔 Inventario de productos: ${JSON.stringify(products)}`);
+  console.log("📒 Sirviendo recurso: 'shop.html'");
+  res.render('shop', {shop: 'active', docTitle:"Tienda", products});
 });
 
 router.use((req, res)=>{
