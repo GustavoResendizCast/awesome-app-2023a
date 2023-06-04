@@ -2,7 +2,7 @@
 import { Router } from 'express';
 
 // Importando productos
-import { products } from './admin.routes.js';
+import { getProducts } from '../controllers/products.controller.js'
 
 // Creando una instancia del enrutador de express
 const router = Router();

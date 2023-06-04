@@ -7,7 +7,7 @@ import { getAddProduct, postAddProduct } from '../controllers/products.controlle
 const router = Router();
 
 // POST /admin/add-product
-router.post('/add-product', postAddProduct);
+router.post('/add-product', getAddProduct);
 
 // POST /admin/add-product
 router.post('/add-product', postAddProduct);
