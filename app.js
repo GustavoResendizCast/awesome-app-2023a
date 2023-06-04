@@ -1,8 +1,6 @@
 // Importando Express
 import express from 'express';
-// Importando http-status
 import httpStatus from 'http-status'
-import path from 'path';
 
 // Template Engine
 import { Engine } from 'express-handlebars';
@@ -14,6 +12,8 @@ import shopRouter from './routes/shop.route.js';
 
 // Importando el ROOT_DIR
 import { ROOT_DIR } from './helpers/paths.js';
+
+import path from 'path';
 
 // Creando la instancia de express
 // que basicamente es un middleware
