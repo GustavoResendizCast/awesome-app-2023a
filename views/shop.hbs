@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-
-<body>
- 
-  
-   <h1>My Products</h1>
-   {{#unless isProductsListEmpty }}
+<h1>My Products</h1>
+{{#unless isProductsListEmpty }}
 <p>Product List</p>
 <div class="grid">
   {{#each products}}
@@ -25,7 +12,7 @@
     <div class="card__image">
       <img
         width="150px"
-        src="/public/images/muckupProduct.png"
+        src="/images/muckupProduct.png"
         alt="product"
       />
     </div>
@@ -41,13 +28,10 @@
       <button class="btn">
         Add to Cart
       </button>
-       {{/each}}
     </div>
   </article>
+  {{/each}}
 </div>
-  {{else}}
+{{else}}
 <h2 style="color: cornflowerblue;">No products in stock</h2>
 {{/unless}}
-</body>
-
-</html>

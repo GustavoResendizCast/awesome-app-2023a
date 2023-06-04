@@ -5,22 +5,12 @@ import { getAddProduct, postAddProduct } from '../controllers/products.controlle
 
 // Creando una instancia del enrutador de express
 const router = Router();
-// Datos en memoria volatil
-export const products = [];
 
 // POST /admin/add-product
 router.post('/add-product', postAddProduct);
 
 // POST /admin/add-product
-export const postAddProduct = (req, res) => {
-  // Realizaremos la desestructuracion de
-  // "name" de la petición
-  const { title } = req.body;
-  // Agregamos el dato en la base de datos
-  products.push(title);
-  // Redireccionando
-  return res.redirect('/');
-}
+router.post('/add-product', postAddProduct);
 
 // Exportando el enrutador admin
 export default router;

@@ -1,14 +1,11 @@
 // Importando el enrutador de express
 import { Router } from 'express';
-// Importando Action funcion del controlador products
-import { getProducts } from '../controllers/products.controller.js'
-
-// Creando una instancia del enrutador de express
-const router = Router();
 
 // Importando productos
 import { products } from './admin.routes.js';
-import httpsStatus from 'http-status'
+
+// Creando una instancia del enrutador de express
+const router = Router();
 
 // GET /
 router.get('/', getProducts);
@@ -21,13 +18,6 @@ router.get('/about', (req, res) => {
     <h1>🪄 About...</h1>
     <p>App for Fullstack Web Dev Course I!</p>
   `);
-});
-
-// La ruta raíz entra en todo tipo de petición
-router.get(["/", "/home"], (_, res) => {
-  console.log(`📔 Inventario de productos: ${JSON.stringify(products)}`);
-  console.log("📒 Sirviendo recurso: 'shop.html'");
-  res.render('shop', {shop: 'active', docTitle:"Tienda", products});
 });
 
 router.use((req, res)=>{
