@@ -1,18 +1,11 @@
 // Importando el enrutador de express
 import { Router } from 'express';
 
-// Importando el gestor de rutas
-import path from 'path';
-
-// Creando una instancia del enrutador de express
-const router = Router();
-
-
 // Importando Action funcion del controlador products
 import { getProducts } from '../controllers/products.controller.js'
 
-import httpStatus from 'http-status';
-
+// Creando una instancia del enrutador de express
+const router = Router();
 
 // GET /
 router.get('/', getProducts);

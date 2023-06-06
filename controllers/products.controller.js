@@ -1,3 +1,6 @@
+// Datos en memoria volatil
+export const products = [];
+
 // GET /admin/add-product
 export const getAddProduct = function (req, res, next) {
   // Servimos el formulario
@@ -7,9 +10,6 @@ export const getAddProduct = function (req, res, next) {
     viewStyle: '/css/product.css',
     docTitle:"Add Product"});
 }
-
-// Datos en memoria volatil
-export const products = [];
 
 // POST /admin/add-product
 export const postAddProduct = (req, res) => {
