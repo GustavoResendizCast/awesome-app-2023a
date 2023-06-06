@@ -1,11 +1,18 @@
 // Importando el enrutador de express
 import { Router } from 'express';
 
-// Importando productos
-import { getProducts } from '../controllers/products.controller.js'
+// Importando el gestor de rutas
+import path from 'path';
 
 // Creando una instancia del enrutador de express
 const router = Router();
+
+
+// Importando Action funcion del controlador products
+import { getProducts } from '../controllers/products.controller.js'
+
+import httpStatus from 'http-status';
+
 
 // GET /
 router.get('/', getProducts);
@@ -21,6 +28,8 @@ router.get('/about', (req, res) => {
 });
 
 router.use((req, res)=>{
-  res.sendFile(path.resolve('views','notfound.html'));
+  console.log("📢error 404");
+  res.status(httpStatus.NOT_FOUND).sendFile(path.resolve('views','notfound.hbs'));
 });
+
 export default router;
